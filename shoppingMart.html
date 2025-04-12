@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Shopping Mart</title>
+    <link rel="stylesheet" href="style .css">
+</head>
+<body>
+    <div class="contener">
+        <nav>
+            <div class="logo">
+             <h1>Shopping Mart</h1>
+            </div>
+
+            <ul>
+                <a href="">Home</a>
+                <a id="cloths" href="#cloth">Cloths</a>
+                <a id="blogs" href="#blog">Blogs</a>
+                <a id="reviews" href="#review">Review</a>
+                <a id="contacts" href="#contact">Contect Us</a>
+                <button id="login">Log In</button>
+            </ul>
+        </nav>
+        <!-- login-->
+         <div class="loginPage">
+            <div class="signin">
+                <h2>LogIn</h2>
+                <form>
+                  <input type="text" placeholder="User Nmae" required />
+                  <input type="password" placeholder="Password" required />
+                  <button type="submit">Log In</button>
+                </form>
+                <div class="toggle-link">
+                  Don't have an account? <a onclick="toggleForm()">Sign Up</a>
+                </div>
+              </div>
+            
+              <div class="signup"style="display: none;">
+                <h2>SignUp</h2>
+                <form>
+                  <input type="text" placeholder="Username" required  />
+                  <input type="email" placeholder="Email" required />
+                  <input type="password" placeholder="Password" required />
+                  <button type="submit">Sign Up</button>
+                </form>
+                <div class="toggle-link">
+                  Already have an account? <a onclick="toggleForm()">Sign In</a>
+                </div>
+              </div>
+         </div> 
+        
+        <!---main-->
+        <div class="main">
+            <div class="mainTaxt">
+                <h1 id="h1">Great Deals Exciting Offers</h1>
+                <h2 id="h2">Save Upto 30% Off</h2>
+                <p>Discover amazing deals on stylish clothing! Don't miss out on exclusive discounts and <br>limited-time offers to upgrade your wardrobe. Shop now and grab your favorites at unbeatable prices!</p>
+                <button id="button">Explore</button>
+            </div>
+            <img src="Photos/main.png" alt="">
+        </div>
+          
+        <!--cloths-->
+
+        <div class="cloth" id="cloth"> 
+            <div class="head">
+                <h1>Trending Women <span>T-Shirt</span></h1>
+            </div>
+
+            <div class="card">
+                <div class="trend">
+                    <img src="Photos/g1.png" alt="">
+                    <div class="cardText">
+                        <p>Trending Women T-Shirt</p>
+                        <h2> Rs 599 only</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="trend">
+                    <img src="Photos/g2.png" alt="">
+                    <div class="cardText">
+                        <p>Trending Women T-Shirt</p>
+                        <h2>Rs 499 only</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="trend">
+                    <img src="Photos/g3.png" alt="">
+                    <div class="cardText">
+                        <p>Trending Women T-Shirt</p>
+                        <h2>Rs 349 only</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cloth">
+            <div class="head">
+                <h1>Trending Men <span>T-Shirt</span></h1>
+            </div>
+
+            <div class="card">
+                <div class="trend">
+                    <img src="Photos\b1.png" alt="">
+                    <div class="cardText">
+                        <p>Trending Man T-Shirt</p>
+                        <h2>Rs 999 only</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="trend">
+                    <img src="Photos\b2.png" alt="">
+                    <div class="cardText">
+                        <p>Trending Man T-Shirt</p>
+                        <h2>Rs 599 only</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="trend">
+                    <img src="Photos\b3.png" alt="">
+                    <div class="cardText">
+                        <p>Trending Man T-Shirt</p>
+                        <h2>Rs 749 only</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- blog -->
+
+        <div class="read" id="blog">
+           <div class="head">
+                <h1>Read <span>Blog's</span></h1>
+           </div>
+        </div>
+        <div class="blog">
+            <div class="blogCard">
+                <img src="Photos/gTrend.png" alt="">
+                <div class="blogText">
+                    <h2>Girls Trending Tops</h2>
+                    <p>A "gir trending top" is a fashionable, popular top for girls, often inspired by current trends and styles.</p>
+                    <a href="https://www.apetogentleman.com/">Read More</a>
+                </div>
+            </div>
+
+            <div class="blogCard">
+                <img src="Photos/mTrend.png" alt="">
+                <div class="blogText">
+                    <h2>Men Trending T-Shirt</h2>
+                    <p>A "Men trending T-Shirt" is a fashionable, popular top for men, often inspired by current trends and styles.</p>
+                    <a href= "https://www.apetogentleman.com/" >Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--review-->
+
+        <div class="review" id="review">
+            <div class="head">
+                <h1>Customer <span>Review</span></h1>
+                <div class="customer">
+                    <div class="review">
+                        <img src="Photos/review.png" alt="">
+                        <p>"Love this top! Super comfy, great fit, and stylish. I've gotten so many compliments!"</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <img src="Photos/review2.png" alt="">
+                        <p>"Love this top! Super comfy, great fit, and stylish. I've gotten so many compliments!"</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <img src="Photos/review3.png" alt="">
+                        <p>"Love this top! Super comfy, great fit, and stylish. I've gotten so many compliments!"</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Contact Us-->
+
+        <div class="contact" id="contact">
+            <div class="head">
+                <h1>contact <span>Us</span></h1>
+            </div>
+
+            <div class="contactPage">
+                <input type="text" placeholder="Enter Your Name" id="name"><br>
+                <input type="text" placeholder="Enter Your Email Id" id="email"><br>
+                <input type="text" placeholder="Write Your Massage !" id="Massage">
+                <button id="Submit">Submit</button>
+
+            </div>
+        </div>
+
+        <!-- Footer-->
+
+        <div class="footer">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>Our clothing brand offers stylish, high-quality <br>  pieces designed for comfort and confidence.<br>We focus on creating trendy, versatile items<br> that elevate everyday wear, ensuring you look<br> and feel your best</p>
+            </div>
+            <div class="text">
+                <h2>Product</h2>
+                <p>Our Design</p>
+                <p>Theme</p>
+                <p>Quality</p>
+                <p> Best Price</p>
+                
+            </div>
+            <div class="text">
+                <h2>Quality</h2>
+                <p>Focus</p>
+                <p>Customer</p>
+                <p>Review</p>
+                <p>Offer</p>
+                
+            </div>
+            <div class="text">
+                <h2>Adress</h2>
+                <p>48/1, 4th Floore</p>
+                <p>Salkia, Howrah</p>
+                <p>Kolkata</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js "></script>
+</body>
+</html>
