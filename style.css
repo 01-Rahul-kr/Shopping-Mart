@@ -1,0 +1,397 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(241, 237, 237);
+    padding-top: 70px;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(196, 200, 180);
+    box-shadow: 0px 4px 0px rgb(154, 154, 154);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #menu-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    display: none;
+  }
+  
+  #desktop-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-right: 20px;
+  }
+  
+  #desktop-menu a,
+  #mobile-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+  }
+  
+  #desktop-menu a:hover,
+  #mobile-menu a:hover {
+    color: red;
+    border-bottom: 2px solid red;
+  }
+  
+  .login-btn {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(231, 5, 5);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    border: 2px solid red;
+    background-color: transparent;
+    color: black;
+  }
+  
+  #mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(196, 200, 180);
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px;
+    z-index: 9;
+  }
+  
+  /* Hero/Main Section */
+  .main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  .mainText {
+    max-width: 600px;
+  }
+  
+  #h1 {
+    font-size: 6vw;
+  }
+  
+  #h2 {
+    font-size: 4vw;
+    color: rgb(98, 170, 153);
+  }
+  
+  .main img {
+    max-width: 90%;
+    height: auto;
+  }
+  
+  #button {
+    width: 140px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: solid rgb(53, 37, 49);
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  
+  #button:hover {
+    border: 3px solid red;
+    background-color: transparent;
+    color: black;
+  }
+  
+  /* Section Headings */
+  .head {
+    text-align: center;
+    margin-top: 45px;
+    padding: 55px 10px;
+  }
+  
+  .head span {
+    color: rgb(6, 161, 161);
+  }
+  
+  /* Trend Cards */
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card .trend {
+    width: 280px;
+    background-color: #fff;
+    transition: 0.6s ease;
+  }
+  
+  .trend img {
+    width: 100%;
+  }
+  
+  .trend .cardText {
+    padding: 10px;
+  }
+  
+  .trend i {
+    color: rgb(225, 149, 0);
+    font-size: 22px;
+  }
+  
+  .trend button {
+    width: 90px;
+    height: 38px;
+    background-color: red;
+    font-size: 12px;
+    border-radius: 22px;
+    border: none;
+    color: white;
+    margin-left: 33px;
+  }
+  
+  .card .trend:hover {
+    background-color: rgb(196, 200, 180);
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Blog Section */
+  .blog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .blogCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    transition: 0.7s ease;
+  }
+  
+  .blogCard:hover {
+    background-color: rgb(217, 214, 214);
+  }
+  
+  .blogCard img {
+    width: 100%;
+    border-radius: 11px;
+  }
+  
+  .blogCard .blogText {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .blogText a {
+    display: inline-block;
+    padding: 7px 15px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border-radius: 2rem;
+    text-decoration: none;
+  }
+  
+  /* Customer Reviews */
+  .customer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .review {
+    background-color: #fff;
+    padding: 24px;
+    width: 280px;
+    text-align: center;
+  }
+  
+  .review img {
+    width: 44%;
+    border-radius: 50%;
+  }
+  
+  .review i {
+    color: orange;
+    font-size: 22px;
+  }
+  
+  /* Contact Section */
+  .contactPage {
+    border: 4px solid rgb(7, 133, 133);
+    text-align: center;
+    padding: 44px;
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  
+  .contactPage input {
+    width: 100%;
+    padding: 9px;
+    font-size: 18px;
+    margin-top: 11px;
+    border: 2px solid rgb(7, 133, 133);
+    outline: none;
+  }
+  
+  .contactPage input:hover {
+    border: 2px solid white;
+    background: linear-gradient(to bottom, #ffffff 4%, #669999 99%);
+  }
+  
+  .contactPage button {
+    width: 140px;
+    height: 37px;
+    background-color: rgb(7, 133, 133);
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 22px;
+    cursor: pointer;
+  }
+  
+  .contactPage button:hover {
+    border: 3px solid white;
+    background: linear-gradient(to bottom, #ffffff 4%, #669999 99%);
+    color: black;
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(196, 200, 180);
+    color: black;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  /* Login */
+  .loginPage {
+    display: none;
+    position: fixed;
+    right: 5%;
+    top: 80px;
+    width: 280px;
+    height: 350px;
+    padding: 22px;
+    border: 1px solid rgb(154, 154, 154);
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(to bottom, #33cccc 4%, #ffffff 99%);
+    z-index: 1000;
+  }
+  
+  .loginPage input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #33cccc 4%, #ffffff 99%);
+    border: 1px solid #000000;
+  }
+  
+  .loginPage input:hover {
+    background: linear-gradient(to bottom, #ffffff 4%, #669999 99%);
+    border: 1px solid #fff;
+  }
+  
+  .loginPage button {
+    width: 100px;
+    padding: 6px;
+    margin-top: 40px;
+    background: linear-gradient(to bottom, #33cccc 4%, #ffffff 99%);
+  }
+  
+  .loginPage button:hover {
+    border: 1px solid #fff;
+    background: linear-gradient(to bottom, #ffffff 4%, #669999 99%);
+  }
+  
+  .toggle-link {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .toggle-link a {
+    color: #094a4f;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* MEDIA QUERY */
+  @media (max-width: 768px) {
+    #desktop-menu {
+      display: none;
+    }
+  
+    #menu-btn {
+      display: block;
+    }
+  
+    #mobile-menu {
+      display: flex;
+    }
+  
+    .mainText {
+      text-align: center;
+    }
+  
+    #h1, #h2 {
+      font-size: 6vw;
+    }
+  
+    .trend button {
+      margin: 10px auto;
+      display: block;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

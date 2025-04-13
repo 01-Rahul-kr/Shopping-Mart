@@ -1,95 +1,33 @@
-let cloths = document.getElementById("cloths");
-let reviews = document.getElementById("reviews");
-let blogs = document.getElementById("blogs");
-let contacts = document.getElementById("contacts");
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const desktopMenu = document.getElementById('desktop-menu');
 
-cloths.addEventListener("click", function(){
-    cloths.style.color="red";
-    reviews.style.color="white";
-    blogs.style.color="white";
-    contacts.style.color="white";
-})
-
-reviews.addEventListener("click", function(){
-    cloths.style.color="white";
-    reviews.style.color="red";
-    blogs.style.color="white";
-    contacts.style.color="white";
-})
-
-blogs.addEventListener("click", function(){
-    cloths.style.color="white";
-    reviews.style.color="white";
-    blogs.style.color="red";
-    contacts.style.color="white";
-})
-
-contacts.addEventListener("click", function(){
-    cloths.style.color="white";
-    reviews.style.color="white";
-    blogs.style.color="white";
-    contacts.style.color="red";
-})
-
-// login || SignUp
-function toggleForm() {
-  const loginForm = document.querySelector('.signin');
-  const signupForm = document.querySelector('.signup');
-
-  
-  if (loginForm.style.display === "none") {
-    loginForm.style.display = "block";
-    signupForm.style.display = "none";
+// Toggle the mobile menu visibility
+function toggleMenu() {
+  // Toggle the display of the mobile menu
+  if (mobileMenu.style.display === 'flex') {
+    mobileMenu.style.display = 'none'; // Hide menu
   } else {
-    loginForm.style.display = "none";
-    signupForm.style.display = "block";
+    mobileMenu.style.display = 'flex'; // Show menu
   }
 }
 
-function toggleForm() {
-    const signin = document.querySelector('.signin');
-    const signup = document.querySelector('.signup');
-    
-    if (signin.style.display === 'none') {
-      signin.style.display = 'block';
-      signup.style.display = 'none';
-    } else {
-      signin.style.display = 'none';
-      signup.style.display = 'block';
-    }
+// Handle resizing of the window
+function handleResize() {
+  if (window.innerWidth < 768) {
+    // For smaller screens, hide the desktop menu and show the menu button
+    desktopMenu.style.display = 'none';
+    menuBtn.style.display = 'block';
+    mobileMenu.style.display = 'none'; // Ensure mobile menu is hidden by default
+  } else {
+    // For larger screens, show the desktop menu and hide the mobile menu
+    desktopMenu.style.display = 'flex';
+    mobileMenu.style.display = 'none';
+    menuBtn.style.display = 'none';
+  }
 }
 
-let login = document.getElementById("login");
-
-login.addEventListener("click", function(){
-  document.querySelector(".loginPage").style.display="block";
-})
-
-//Contact Us
-
-document.getElementById("Submit").addEventListener("click", function () {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("Massage").value.trim();
-
-  if (name === "" || email === "" || message === "") {
-      alert("Please fill in all fields.");
-      return;
-  }
-
-  if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
-      return;
-  }
-
-  alert(`Thank you, ${name}! Your message has been sent.`);
-
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("Massage").value = "";
-});
-
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email.toLowerCase());
-}
+// Add event listeners
+menuBtn.addEventListener('click', toggleMenu);
+window.addEventListener('resize', handleResize);
+window.addEventListener('load', handleResize);

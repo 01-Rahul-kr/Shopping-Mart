@@ -2,27 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <title>Shopping Mart</title>
-    <link rel="stylesheet" href="style .css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="contener">
+       
         <nav>
-            <div class="logo">
-             <h1>Shopping Mart</h1>
-            </div>
-
-            <ul>
-                <a href="">Home</a>
-                <a id="cloths" href="#cloth">Cloths</a>
-                <a id="blogs" href="#blog">Blogs</a>
-                <a id="reviews" href="#review">Review</a>
-                <a id="contacts" href="#contact">Contect Us</a>
-                <button id="login">Log In</button>
+            <div class="logo">Shopping Mart</div>
+        
+            <!-- Hamburger Toggle Button -->
+            <button id="menu-btn">☰</button>
+        
+            <!-- Desktop Menu -->
+            <ul id="desktop-menu">
+              <a href="#">Home</a>
+              <a href="#">Cloths</a>
+              <a href="#">Blogs</a>
+              <a href="#">Review</a>
+              <a href="#">Contact</a>
+              <button class="login-btn">Login</button>
             </ul>
-        </nav>
+          </nav>
+        
+          <!-- Mobile Menu -->
+          <div id="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">Cloths</a>
+            <a href="#">Blogs</a>
+            <a href="#">Review</a>
+            <a href="#">Contact</a>
+            <button class="login-btn">Login</button>
+          </div>
+        
+
         <!-- login-->
          <div class="loginPage">
             <div class="signin">
