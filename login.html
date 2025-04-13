@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: rgb(241, 237, 237);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loginPage {
+      width: 300px;
+      padding: 30px;
+      border: 1px solid rgb(154, 154, 154);
+      border-radius: 15px;
+      text-align: center;
+      background: linear-gradient(to bottom, #33cccc 4%, #ffffff 99%);
+    }
+
+    .loginPage h2 {
+      margin-bottom: 20px;
+    }
+
+    .loginPage input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 15px;
+      border: 1px solid #000000;
+      background: linear-gradient(to bottom, #33cccc 4%, #ffffff 99%);
+    }
+
+    .loginPage input:hover {
+      background: linear-gradient(to bottom, #ffffff 4%, #669999 99%);
+      border: 1px solid #fff;
+    }
+
+    .loginPage button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 25px;
+      font-size: 16px;
+      border: none;
+      background: linear-gradient(to bottom, #33cccc 4%, #ffffff 99%);
+      cursor: pointer;
+    }
+
+    .loginPage button:hover {
+      background: linear-gradient(to bottom, #ffffff 4%, #669999 99%);
+      border: 1px solid #fff;
+    }
+
+    .toggle-link {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .toggle-link a {
+      color: #094a4f;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .signup {
+      display: none;
+    }
+
+    /* Adjustments for Login visibility and positioning */
+    .signin {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Form -->
+<div class="loginPage">
+    <div class="signin">
+      <h2>LogIn</h2>
+      <form id="login-form" onsubmit="return handleLogin(event)">
+        <input type="text" id="username" placeholder="Username" required aria-label="Username" />
+        <input type="password" id="password" placeholder="Password" required aria-label="Password" />
+        <a href="index.html"><button type="submit">Log In</button></a>
+      </form>
+      <div class="toggle-link">
+        Don't have an account? <a onclick="toggleForm()">Sign Up</a>
+      </div>
+    </div>
+    
+    <div class="signup" style="display: none;">
+      <h2>SignUp</h2>
+      <form>
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a href="index.html"><button type="submit">Sign Up</button></a>
+      </form>
+      <div class="toggle-link">
+        Already have an account? <a onclick="toggleForm()">Sign In</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    function toggleForm() {
+      const signin = document.querySelector(".signin");
+      const signup = document.querySelector(".signup");
+      signin.style.display = signin.style.display === "none" ? "block" : "none";
+      signup.style.display = signup.style.display === "none" ? "block" : "none";
+    }
+
+    // JavaScript for handling login form submission
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+      
+      // Get the username and password input values
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      
+      // Validate credentials (For demonstration, using hardcoded values)
+      if (username === "user" && password === "password") {
+        // If login is successful, redirect to index.html
+        window.location.href = "index.html"; // Redirect to your main page
+      } else {
+        // If credentials are incorrect, alert the user
+        alert("Invalid username or password!");
+      }
+    }
+  </script>
+
+</body>
+</html>
